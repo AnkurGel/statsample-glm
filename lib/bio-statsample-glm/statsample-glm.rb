@@ -1,3 +1,0 @@
-module BioStatsampleGlm
-
-end
