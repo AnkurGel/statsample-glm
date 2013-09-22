@@ -15,10 +15,10 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "bio-statsample-glm"
-  gem.homepage = "http://github.com/ankurgel/bioruby-statsample-glm"
+  gem.homepage = "http://github.com/AnkurGel/bioruby-statsample-glm"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Generalized Linear Models for Statsample}
+  gem.description = %Q{Statsample-GLM is an extension to Statsample, an advance statistics suite in Ruby. This gem includes modules for Regression techniques such as Poisson Regression, Logistic Regression and Exponential Regression}
   gem.email = "ankurgel@gmail.com"
   gem.authors = ["Ankur Goel"]
   # dependencies defined in Gemfile

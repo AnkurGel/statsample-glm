@@ -1,8 +1,12 @@
 # bio-statsample-glm
 
-[![Build Status](https://secure.travis-ci.org/ankurgel/bioruby-statsample-glm.png)](http://travis-ci.org/ankurgel/bioruby-statsample-glm)
+[![Build Status](https://secure.travis-ci.org/AnkurGel/bioruby-statsample-glm.png)](http://travis-ci.org/AnkurGel/bioruby-statsample-glm)
 
-Full description goes here
+Statsample-GLM is an extension to [Statsample](https://github.com/clbustos/statsample), a suite of advance statistics in Ruby. It includes modules for various regression techniques such as: 
+  
+  * Poisson Regression
+  * Logistic Regression
+  * Exponential Regression
 
 Note: this software is under active development!
 
@@ -26,7 +30,7 @@ the source tree.
 Information on the source tree, documentation, examples, issues and
 how to contribute, see
 
-  http://github.com/ankurgel/bioruby-statsample-glm
+  http://github.com/AnkurGel/bioruby-statsample-glm
 
 The BioRuby community is on IRC server: irc.freenode.org, channel: #bioruby.
 
