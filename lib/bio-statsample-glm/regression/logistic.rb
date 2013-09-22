@@ -21,7 +21,7 @@ module Statsample
         end
 
         def self.w(x, b)
-          mus = mu(x,b).column_vectors(&:to_a).flatten
+          mus = mu(x,b).column_vectors.map(&:to_a).flatten
           mus_intermediate = mus.collect { |x| 1 - x }
           w = mus.zip(mus_intermediate).collect { |x| x.inject(:*) }
           w_mat = Matrix.I(w.size)

@@ -8,4 +8,5 @@
 #
 # In this file only require other files. Avoid other source code.
 
+require 'statsample'
 require 'bio-statsample-glm/regression'
