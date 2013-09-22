@@ -8,5 +8,4 @@
 #
 # In this file only require other files. Avoid other source code.
 
-require 'bio-statsample-glm/statsample-glm.rb'
-
+require 'bio-statsample-glm/regression'
