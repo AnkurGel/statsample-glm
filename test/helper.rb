@@ -42,6 +42,14 @@ module MiniTest
         assert_in_delta(v,obs[i],delta)
       }
     end
+    def assert_similar_hash(exp, obs, delta=1e-10,msg=nil)
+      msg||="Different hash #{exp} - #{obs}"
+      assert_equal(exp.size, obs.size)
+      exp.each_key {|k|
+        assert_in_delta(exp[k],obs[k],delta)
+      }
+    end
+
     def assert_equal_vector(exp,obs,delta=1e-10,msg=nil)
       assert_equal(exp.size, obs.size, "Different size.#{msg}")
       exp.size.times {|i|

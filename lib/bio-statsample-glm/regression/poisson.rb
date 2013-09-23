@@ -5,7 +5,7 @@ module Statsample
       class Poisson
 
         # a named vector of coefficients
-        attr_reader :coefficients
+        #attr_reader :coefficients
         #
         attr_reader :se
         # The fitted mean values
@@ -19,11 +19,23 @@ module Statsample
         # Boolean. Tells whether the IRWLS for the given model converged or not
         attr_reader :converged
 
-        def initialize(x, y)
-          @x = x
+        def initialize(ds, y)
+		  @ds=ds
+		  @fields=@ds.fields
+          @x = ds.to_matrix
           @y = y
         end
-
+		def coefficients(type=:array)
+			if type==:array
+				@coefficients
+			elsif type==:hash
+				h={}
+				@fields.size.times {|i|
+					h[@fields[i]]=@coefficients[i]
+				}
+				h
+			end
+		end
         def self.mu(x, b, link=:log)
           if link.downcase.to_sym == :log
             (x * b).map { |y| Math.exp(y) }

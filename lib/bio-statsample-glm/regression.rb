@@ -22,12 +22,16 @@ module Statsample
     #
     # == Returns
     #    GLM object for given method.
-    def self.glm(x, y, method=:poisson)
+    def self.glm(x, y, method=:gaussian)
+    
       if method.downcase.to_sym == :poisson
         obj = Statsample::Regression::GLM::Poisson.new(x,y)
       elsif method.downcase.to_sym == :binomial
         obj = Statsample::Regression::GLM::Logistic.new(x,y)
+      else
+		raise("Not implemented yet")
       end
+      obj.irwls
       obj
       #now, #irwls method is available to be called on returned obj
     end
