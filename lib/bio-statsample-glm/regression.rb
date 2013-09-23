@@ -29,11 +29,10 @@ module Statsample
       elsif method.downcase.to_sym == :binomial
         obj = Statsample::Regression::GLM::Logistic.new(x,y)
       else
-		raise("Not implemented yet")
+        raise("Not implemented yet")
       end
       obj.irwls
       obj
-      #now, #irwls method is available to be called on returned obj
     end
 
 

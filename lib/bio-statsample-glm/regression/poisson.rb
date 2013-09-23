@@ -4,9 +4,6 @@ module Statsample
 
       class Poisson
 
-        # a named vector of coefficients
-        #attr_reader :coefficients
-        #
         attr_reader :se
         # The fitted mean values
         attr_reader :fit
@@ -20,22 +17,27 @@ module Statsample
         attr_reader :converged
 
         def initialize(ds, y)
-		  @ds=ds
-		  @fields=@ds.fields
+          @ds=ds
+          @fields=@ds.fields
           @x = ds.to_matrix
           @y = y
         end
-		def coefficients(type=:array)
-			if type==:array
-				@coefficients
-			elsif type==:hash
-				h={}
-				@fields.size.times {|i|
-					h[@fields[i]]=@coefficients[i]
-				}
-				h
-			end
-		end
+
+        # named vector/hash of coefficients
+        # === Parameter
+        # * *type*: symbol; (:array, default). Options = [:array, :hash]
+        def coefficients(type=:array)
+          if type==:array
+            @coefficients
+          elsif type==:hash
+            h={}
+            @fields.size.times {|i|
+              h[@fields[i]]=@coefficients[i]
+            }
+            h
+          end
+        end
+
         def self.mu(x, b, link=:log)
           if link.downcase.to_sym == :log
             (x * b).map { |y| Math.exp(y) }

@@ -11,15 +11,15 @@ class StatsampleRegressionGlmPoisson < MiniTest::Unit::TestCase
       intercept=Statsample::Vector.new([1]*50,:scale)
       @df=Statsample::Dataset.new({"i"=>intercept,"x1"=>x1,"x2"=>x2})
       @glm=Statsample::Regression.glm(@df,@y_pois,:poisson)
-      
-     end
-     should "report correct coefficientes as array" do
-       assert_similar_vector(@glm.coefficients,[0.32993246633711,-0.586359358356708,1.28511323439258])
-     end # should
-     should "report correct coefficientes as hash" do
-       assert_similar_hash(@glm.coefficients(:hash), {"i"=>0.32993246633711,"x1"=>-0.586359358356708, "x2"=>1.28511323439258})
-     end # should
-	 
-    end # context
+
+    end
+    should "report correct coefficientes as array" do
+      assert_similar_vector(@glm.coefficients,[0.32993246633711,-0.586359358356708,1.28511323439258])
+    end # should
+    should "report correct coefficientes as hash" do
+      assert_similar_hash(@glm.coefficients(:hash), {"i"=>0.32993246633711,"x1"=>-0.586359358356708, "x2"=>1.28511323439258})
+    end # should
+
+  end # context
 end # class
 

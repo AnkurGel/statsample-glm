@@ -12,12 +12,12 @@ class StatsampleRegressionGlmLogistic < MiniTest::Unit::TestCase
       @df=Statsample::Dataset.new({"i"=>intercept,"x1"=>x1,"x2"=>x2})
       @glm=Statsample::Regression.glm(@df,@y_log,:binomial)
     end
-	  should "report correct coefficientes as array" do
-		assert_similar_vector(@glm.coefficients,[0.675603176233325,-0.312493754568903,2.28671333346264])
-	  end
-	  should "report correct coefficientes as hash" do
-		assert_similar_hash(@glm.coefficients(:hash), {"i"=>0.675603176233325,"x1"=>-0.312493754568903,"x2"=>2.28671333346264})
-	  end
+    should "report correct coefficientes as array" do
+      assert_similar_vector(@glm.coefficients,[0.675603176233325,-0.312493754568903,2.28671333346264])
+    end
+    should "report correct coefficientes as hash" do
+      assert_similar_hash(@glm.coefficients(:hash), {"i"=>0.675603176233325,"x1"=>-0.312493754568903,"x2"=>2.28671333346264})
+    end
 
-	end
-	end
+  end
+end
