@@ -4,11 +4,26 @@ module Statsample
 
       class Poisson
 
-        attr_reader :coefficients, :se, :fit, :residuals, :df, :iter, :converged
+        # a named vector of coefficients
+        attr_reader :coefficients
+        #
+        attr_reader :se
+        # The fitted mean values
+        attr_reader :fit
+        # the _working_ residuals; that is the residuals in the final iteration of the IRWLS fit.
+        attr_reader :residuals
+        # The residuals degree of freedom
+        attr_reader :df
+        # Number of iterations used for convergence
+        attr_reader :iter
+        # Boolean. Tells whether the IRWLS for the given model converged or not
+        attr_reader :converged
+
         def initialize(x, y)
           @x = x
           @y = y
         end
+
         def self.mu(x, b, link=:log)
           if link.downcase.to_sym == :log
             (x * b).map { |y| Math.exp(y) }
@@ -41,9 +56,9 @@ module Statsample
           jacobian_matrix.map { |x| -x }
         end
 
-        #def to_s
-        #  sprintf("Poisson Regression")
-        #end
+        def to_s
+          sprintf("Logistic Regression (Statsample::Regression::GLM;:Logistic)")
+        end
 
         def irwls
           x,y = @x,@y
