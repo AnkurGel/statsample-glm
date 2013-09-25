@@ -1,46 +1,69 @@
-= bio-statsample-glm
+= statsample-glm
 
 {<img
-src="https://secure.travis-ci.org/ankurgel/bioruby-statsample-glm.png"
-/>}[http://travis-ci.org/#!/ankurgel/bioruby-statsample-glm]
+src="https://secure.travis-ci.org/AnkurGel/statsample-glm.png"
+/>}[http://travis-ci.org/#!/AnkurGel/statsample-glm]
 
-Full description goes here
+Statsample-GLM is an extension of *Generalized Linear Models* to {Statsample}[https://github.com/SciRuby/statsample], a suite of advance statistics in Ruby.
 
-Note: this software is under active development!
+* {sciruby.com}[http://sciruby.com]
+* {Google+}[https://plus.google.com/109304769076178160953/posts]
+* {Ankur Goel}[http://ankurgoel.com]
+* {Statsample}[https://github.com/SciRuby/statsample]
+
+
+== Description
+Statsample-GLM is an extension of Statsample, and includes many helpful regression techniques for Generalized Linear models such as:
+
+* Poisson Regression
+* Logistic Regression
+* Exponential Regression
+* Iteratively Reweighted Least Squares
+
+Statsample-GLM was created by Ankur Goel as part of Google's Summer of Code 2013. It is the part of {SciRuby}[http://sciruby.com]
+
+Note: This is under active development!
 
 == Installation
 
-        gem install bio-statsample-glm
+        gem install statsample-glm
+
 
 == Usage
 
-== Developers
-
 To use the library 
 
-        require 'bio-statsample-glm'
+        require 'statsample-glm'
 
-The API doc is online. For more code examples see also the test files in
-the source tree.
+You can also go through the blog-posts on {my blog}[http://ankurgoel.com] for descriptive explanation and examples.
+
+
+== Documentation 
+
+The API doc is {online}[http://rubygems.org/gems/statsample-glm]. For more code examples see also the test files in the source tree.
         
+
+== Contributing
+
+* Fork the project. 
+* Create your feature branch
+* Add/Modify code. 
+* Write equivalent documentation and **tests**.
+* Run `rake test` to verify that all test case passes.
+* Push your branch.
+* Pull request. :)
+
+
 == Project home page
 
 Information on the source tree, documentation, issues and how to contribute, see
 
-  http://github.com/ankurgel/bioruby-statsample-glm
+  http://github.com/ankurgel/statsample-glm
 
-The BioRuby community is on IRC server: irc.freenode.org, channel: #bioruby.
-
-== Cite
-
-  If you use this software, please cite one of
- 
-* [BioRuby: bioinformatics software for the Ruby programming language](http://dx.doi.org/10.1093/bioinformatics/btq475)
-* [Biogem: an effective tool-based approach for scaling up open source software development in bioinformatics](http://dx.doi.org/10.1093/bioinformatics/bts080)
 
 == Biogems.info
 
-This Biogem is published at http://biogems.info/index.html#bio-statsample-glm
+This Biogem is published at http://biogems.info/index.html#statsample-glm
 
 == Copyright
 

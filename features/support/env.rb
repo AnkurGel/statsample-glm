@@ -8,7 +8,7 @@ rescue Bundler::BundlerError => e
 end
 
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/../../lib')
-require 'bio-statsample-glm'
+require 'statsample-glm'
 
 require 'test/unit/assertions'
 

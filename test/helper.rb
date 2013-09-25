@@ -15,7 +15,7 @@ require 'mocha/setup'
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
-require 'bio-statsample-glm'
+require 'statsample-glm'
 module MiniTest
   class Unit
     class TestCase
