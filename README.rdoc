@@ -13,14 +13,15 @@ Statsample-GLM is an extension of *Generalized Linear Models* to {Statsample}[ht
 
 
 == Description
-Statsample-GLM is an extension of Statsample, and includes many helpful regression techniques for Generalized Linear models such as:
+Statsample-GLM is an extension of Statsample, and includes many helpful regression techniques for Generalized Linear
+Models, such as:
 
 * Poisson Regression
 * Logistic Regression
 * Exponential Regression
 * Iteratively Reweighted Least Squares
 
-Statsample-GLM was created by Ankur Goel as part of Google's Summer of Code 2013. It is the part of {SciRuby}[http://sciruby.com]
+Statsample-GLM was created by Ankur Goel as part of Google's Summer of Code 2013. It is the part of {the SciRuby Project}[http://sciruby.com].
 
 Note: This is under active development!
 
@@ -60,12 +61,10 @@ Information on the source tree, documentation, issues and how to contribute, see
 
   http://github.com/ankurgel/statsample-glm
 
-
-== Biogems.info
-
 This Biogem is published at http://biogems.info/index.html#statsample-glm
 
 == Copyright
 
-Copyright (c) 2013 Ankur Goel. See LICENSE.txt for further details.
+Copyright (c) 2013 Ankur Goel and the Ruby Science Foundation. See LICENSE.txt for further details.
 
+Statsample is (c) 2009-2013 Claudio Bustos and the Ruby Science Foundation.
