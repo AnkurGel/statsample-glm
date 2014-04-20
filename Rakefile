@@ -1,6 +1,7 @@
 # encoding: utf-8
+require 'rake'
+require 'bundler/gem_tasks'
 
-require 'rubygems'
 require 'bundler'
 begin
   Bundler.setup(:default, :development)
@@ -9,21 +10,16 @@ rescue Bundler::BundlerError => e
   $stderr.puts "Run `bundle install` to install missing gems"
   exit e.status_code
 end
-require 'rake'
 
-require 'jeweler'
-Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "statsample-glm"
-  gem.homepage = "http://github.com/AnkurGel/statsample-glm"
-  gem.license = "MIT"
-  gem.summary = %Q{Generalized Linear Models for Statsample}
-  gem.description = %Q{Statsample-GLM is an extension to Statsample, an advance statistics suite in Ruby. This gem includes modules for Regression techniques such as Poisson Regression, Logistic Regression and Exponential Regression}
-  gem.email = "ankurgel@gmail.com"
-  gem.authors = ["Ankur Goel"]
-  # dependencies defined in Gemfile
+desc "Open IRB with statsample-timeseries loaded."
+task :console do
+  require 'irb'
+  require 'irb/completion'
+  $:.unshift File.expand_path("../lib", __FILE__)
+  require 'statsample-glm'
+  ARGV.clear
+  IRB.start
 end
-Jeweler::RubygemsDotOrgTasks.new
 
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
@@ -39,7 +35,8 @@ task :default => :test
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
+  $:.unshift File.expand_path("../lib", __FILE__)
+  version = Statsample::Regression::VERSION
 
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "statsample-glm #{version}"
