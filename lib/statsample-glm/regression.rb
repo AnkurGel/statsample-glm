@@ -23,7 +23,7 @@ module Statsample
     # == Returns
     #    GLM object for given method.
     def self.glm(x, y, method=:gaussian)
-    
+
       if method.downcase.to_sym == :poisson
         obj = Statsample::Regression::GLM::Poisson.new(x,y)
       elsif method.downcase.to_sym == :binomial
