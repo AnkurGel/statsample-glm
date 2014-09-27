@@ -1,5 +1,5 @@
 module Statsample
-  module Regression
-    VERSION = "0.0.1"
+  module GLM
+    VERSION = "0.0.2"
   end
 end

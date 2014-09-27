@@ -21,22 +21,17 @@ task :console do
   IRB.start
 end
 
-require 'rake/testtask'
-Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-end
 
-require 'cucumber/rake/task'
-Cucumber::Rake::Task.new(:features)
+require 'rspec/core/rake_task'
 
-task :default => :test
+RSpec::Core::RakeTask.new(:spec)
+
+task :default => :spec
 
 require 'rdoc/task'
 Rake::RDocTask.new do |rdoc|
   $:.unshift File.expand_path("../lib", __FILE__)
-  version = Statsample::Regression::VERSION
+  version = Statsample::GLM::VERSION
 
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "statsample-glm #{version}"

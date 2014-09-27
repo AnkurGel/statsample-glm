@@ -1,2 +1,2 @@
 require 'statsample'
-require 'statsample-glm/regression'
+require 'statsample-glm/glm'
