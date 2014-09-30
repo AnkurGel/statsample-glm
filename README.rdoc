@@ -6,6 +6,8 @@ src="https://secure.travis-ci.org/AnkurGel/statsample-glm.png"
 
 Statsample-GLM is an extension of *Generalized Linear Models* to {Statsample}[https://github.com/SciRuby/statsample], a suite of advance statistics in Ruby.
 
+Requires ruby 1.9.3 or higher.
+
 * {sciruby.com}[http://sciruby.com]
 * {Google+}[https://plus.google.com/109304769076178160953/posts]
 * {Ankur Goel}[http://ankurgoel.com]
@@ -13,13 +15,15 @@ Statsample-GLM is an extension of *Generalized Linear Models* to {Statsample}[ht
 
 
 == Description
-Statsample-GLM is an extension of Statsample, and includes many helpful regression techniques for Generalized Linear
-Models, such as:
+Statsample-glm includes the following Generalized Linear Models:
 
-* Poisson Regression
-* Logistic Regression
-* Exponential Regression
 * Iteratively Reweighted Least Squares
+  * Poisson Regression
+  * Logistic Regression
+* Maximum Likelihood Models (Newton Raphson)
+  * Logistic Regression
+  * Probit Regression
+  * Normal Regression
 
 Statsample-GLM was created by Ankur Goel as part of Google's Summer of Code 2013. It is the part of {the SciRuby Project}[http://sciruby.com].
 
@@ -41,7 +45,7 @@ You can also go through the blog-posts on {my blog}[http://ankurgoel.com] for de
 
 == Documentation 
 
-The API doc is {online}[http://rubygems.org/gems/statsample-glm]. For more code examples see also the test files in the source tree.
+The API doc is {online}[http://rubygems.org/gems/statsample-glm]. For more code examples see also the spec files in the source tree.
         
 
 == Contributing
@@ -50,7 +54,7 @@ The API doc is {online}[http://rubygems.org/gems/statsample-glm]. For more code 
 * Create your feature branch
 * Add/Modify code. 
 * Write equivalent documentation and **tests**.
-* Run `rake test` to verify that all test case passes.
+* Run `rspec` to verify that all test case passes.
 * Push your branch.
 * Pull request. :)
 
